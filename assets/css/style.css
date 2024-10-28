@@ -1,0 +1,13 @@
+img{
+    width: 150px;
+    align-content: center;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+}
+.caja{
+    width: 30%;
+    flex-wrap: wrap;
+}

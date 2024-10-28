@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio N° 2 Condiciones</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Tarea 1</a></li>
+            <li><a href="./tarea2.html">Tarea 2</a></li>
+            <li><a href="#">Tarea 3</a></li>
+        </ul>
+        </nav>
+
+    <h1>Password</h1>
+    <p>Selecciona los números correctos para validar tu password de 3 dígitos</p>
+    <section class="container" id="seleccion" style="width: 15%;">
+        <article class="caja" >
+            <select id="dig1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </article>
+        <article class="caja">
+            <select id="dig2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </article>
+        <article class="caja">
+            <select id="dig3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </article>
+    </section>
+    <section >
+        <article><button onclick="validaPassword()"> Ingresar</button></article>
+        <h3><span class="mensaje"></span></h3>
+    </section>
+    <script>
+        function validaPassword(){
+            d1 = document.querySelector('#dig1').value;
+            d2 = document.querySelector('#dig2').value;
+            d3 = document.querySelector('#dig3').value;
+
+            cadena = d1+d2+d3;
+            mensaje = document.querySelector(".mensaje")
+            
+            mensaje.innerHTML="";
+            
+            if (cadena =="911"){
+                mensaje.innerHTML="password 1 correcto";
+                mensaje.style.color="blue";
+            }
+            else if (cadena=="714"){
+                mensaje.innerHTML="Password 2 correcto";
+                mensaje.style.color="blue";
+            }else{
+                mensaje.innerHTML="Password incorrecto";
+                mensaje.style.color ="red";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
